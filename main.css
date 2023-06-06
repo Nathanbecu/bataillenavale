@@ -10,3 +10,10 @@
     justify-content: space-around;
     align-items: center;
 }
+
+#container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

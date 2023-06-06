@@ -7,10 +7,20 @@
 <style>
 </style>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<link href="css/bootstrap.css">
+
 <script src="main.js"></script>
 <body>
-<div id="carte">
+<div id="container">
+    <div id="carte">
 
+    </div>
+    <div id="controls">
+        <div id="boatConf"></div>
+        <button type="button" id="drown" class="btn btn-outline-primary">Couler le bateau marqué</button>
+        <button type="button" id="resetDrowned" class="btn btn-outline-primary">Réinitialiser les bateaux marqués</button>
+    </div>
 </div>
 
 
