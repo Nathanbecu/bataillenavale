@@ -1,9 +1,15 @@
 <?php
-var_dump($_REQUEST);
+$conn = new PDO('mysql:host=localhost;dbname=bataillenavale', "root", "root");
+
 if ($_REQUEST) {
     echo $_REQUEST["action"]();
 }
 
 function saveGame() {
-    var_dump($_REQUEST);
+    global $conn;
+    $boatsConf = json_encode($_REQUEST['game']['boatConf']);
+    $boats = json_encode($_REQUEST['game']['boats']);
+
+    $query = "INSERT INTO games (configuration, boats) VALUES ('" . $boatsConf . "', '" . $boats . "')";
+    $conn->exec($query);
 }
